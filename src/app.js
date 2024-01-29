@@ -31,7 +31,18 @@ function main() {
     // cube material (basic)
     //const material = new THREE.MeshBasicMaterial( { color: 0x044aa88} );
     // cube material (not impacted by light in our scene)
-    const material = new THREE.MeshPhongMaterial({ color: 0x044aa88});
+    //const material = new THREE.MeshPhongMaterial({ color: 0x044aa88});
+
+    // cube texture material
+    const loader = new THREE.TextureLoader();
+    const texture = loader.load("textures/RTS_Crate.png")
+    texture.colorSpace = THREE.SRGBColorSpace;
+    const material = new THREE.MeshPhongMaterial(
+        {
+            color: 0xFF8844,
+            map: texture
+        }
+    );
 
     // create cube mesh
     cube = new THREE.Mesh(geometry, material);
