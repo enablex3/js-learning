@@ -1,0 +1,20 @@
+{
+  "name": "three_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-js": "browserify -p esmify ./src/app.js -o ./public/bundle.js",
+    "watch-js": "watchify ./src/app.js -o ./public/bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "esmify": "^2.1.1",
+    "rxjs": "^7.8.1",
+    "three": "^0.160.1",
+    "watchify": "^4.0.0"
+  }
+}
